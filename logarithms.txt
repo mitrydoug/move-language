@@ -1,0 +1,11 @@
+input = 10000
+base = 2
+iterations = 0
+guess = 0
+diff = base^guess - input
+move -3*((diff < -0.00000000001) + (diff > 0.000000001)) + 4
+guess = guess + 1 - base^guess/input
+iterations = iterations + 1
+move -4
+print guess
+print iterations
